@@ -1,0 +1,33 @@
+name: Send Email Notification
+
+on:
+  push:
+    branches:
+      - main
+      - feature_a
+      - feature_b
+
+jobs:
+  send_email:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Send email notification
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.office365.com
+          server_port: 587
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: Cambios subidos a rama ${{ github.ref_name }}
+          to: ignaciomarquezrobles@outlook.com
+          from: ${{ secrets.EMAIL_USERNAME }}
+          body: >
+            Hola,
+
+            Se han realizado cambios en la rama ${{ github.ref_name }}.
+
+            Este es un mensaje automático enviado desde GitHub Actions.
