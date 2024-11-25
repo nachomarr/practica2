@@ -1,3 +1,0 @@
-Test feature_b
-
-Prueba cambio feature b para video 
