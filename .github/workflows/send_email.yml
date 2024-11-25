@@ -23,7 +23,7 @@ jobs:
           username: ${{ secrets.EMAIL_USERNAME }}
           password: ${{ secrets.EMAIL_PASSWORD }}
           subject: Cambios subidos a rama ${{ github.ref_name }}
-          to: ignaciomarquezrobles@outlook.com
+          to: ignacio.marquez@iteso.mx
           from: ${{ secrets.EMAIL_USERNAME }}
           body: >
             Hola,
