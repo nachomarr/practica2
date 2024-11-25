@@ -1,5 +1,3 @@
 Cambio feature_b
 
-commit para notificacion en b
-
-Prueba pra video b 
+Cambio para viedo en feature_b
